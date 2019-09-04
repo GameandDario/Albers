@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.15.1/dist/phaser-arcade-physics.min.js"></script>
+</head>
+<body>
+    <script>
+        // function randomHsl() {
+        //     return 'hsla(' + (Math.random() * 360) + ', 100%, 50%, 1)';
+        // }
+
+// getRandomColor: () => {
+//             var letters = '0123456789ABCDEF';
+//             var color = '#';
+//             for (var i = 0; i < 6; i++) {
+//             color += letters[Math.floor(Math.random() * 16)];
+//             }
+//             return color;
+//         },
+
+        
+
+        const gameState = {
+
+            onColor1: 0xaaffaa,
+            onColor2: 0xffaaaa,
+            onColor3: 0xed12e4,
+            textDesign: { fill: "#3f3231", font: "18px Verdana"},
+            color1: {red : Phaser.Math.Between(0, 255),
+                green: Phaser.Math.Between(0, 255),
+                blue: Phaser.Math.Between(0, 255)},
+            color2: {red : Phaser.Math.Between(0, 255),
+                green: Phaser.Math.Between(0, 255),
+                blue: Phaser.Math.Between(0, 255)},
+            color3: {red : Phaser.Math.Between(0, 255),
+                green: Phaser.Math.Between(0, 255),
+                blue: Phaser.Math.Between(0, 255)}
+            
+        }
+
+        class Scene1 extends Phaser.Scene {
+            constructor() {
+                super( {key: 'Scene1' })
+            }
+             
+            create() {
+                gameState.text = this.add.text(80, 100, "Here is a square", gameState.textDesign).setVisible(false);
+                this.time.addEvent({
+                    delay: 1500, callback: onEventText, callbackScope: this                   
+                })
+                function onEventText() {gameState.text.setVisible(true)}
+
+                gameState.startSquare = this.add.rectangle(600, 290, 340, 340 ).setVisible(false);
+                //gameState.startSquare.setStrokeStyle(4, 0xa85050);
+                gameState.startSquare.setStrokeStyle(4, gameState.onColor1 )
+
+                this.time.addEvent({
+                    delay: 2500, callback: onEventStartSquare, callbackScope: this                   
+                })
+                function onEventStartSquare() {gameState.startSquare.setVisible(true)}
+
+                gameState.text2 = this.add.text(80, 150, "Like this", gameState.textDesign).setVisible(false);
+                gameState.square1 = this.add.rectangle(600, 290, 340, 340, gameState.onColor1).setVisible(false);
+                this.time.addEvent({
+                    delay: 4000, callback: onEvent, callbackScope: this                   
+                })
+                function onEvent() {gameState.square1.setVisible(true), gameState.text2.setVisible(true)}
+
+                
+                this.input.on('pointerdown', () => {
+                    
+                    this.scene.stop('Scene1')
+                    // this.cameras.main.fade(800, 0, 0, 0, false, function(camera)  {
+                        
+                    //         this.scene.start('Scene2'), console.log('RRR')
+                        
+                    // })
+                    
+                    this.scene.start('Scene2')
+                    
+                });
+            
+            
+            }
+        }
+
+        class Scene2 extends Phaser.Scene {
+            constructor() {
+                super( {key: 'Scene2' })
+            }
+            create() {
+                gameState.text = this.add.text(80, 150, "Here is another one", gameState.textDesign);
+                gameState.startSquare = this.add.rectangle(600, 290, 340, 340 );
+                gameState.startSquare.setStrokeStyle(4, gameState.onColor1);
+                gameState.square2 = this.add.rectangle(600, 310, 250, 250, gameState.onColor2);
+                this.input.on('pointerdown', () => {
+			        this.scene.stop('Scene2')
+			        this.scene.start('Scene3')
+		        })
+            }
+        }
+
+        class Scene3 extends Phaser.Scene {
+            constructor() {
+                super( {key: 'Scene3' })
+            }
+            create() {
+                gameState.text = this.add.text(80, 190, "And another one", gameState.textDesign);
+                gameState.startSquare = this.add.rectangle(600, 290, 340, 340 );
+                gameState.startSquare.setStrokeStyle(4, gameState.onColor1);
+                gameState.square2 = this.add.rectangle(600, 310, 250, 250);
+                gameState.square2.setStrokeStyle(4, gameState.onColor2);
+                gameState.square3 = this.add.rectangle(600, 315, 180, 180, gameState.color3.red, gameState.color3.green, gameState.color3.blue);
+                this.input.on('pointerdown', () => {
+			        this.scene.stop('Scene3')
+			        this.scene.start('Scene4a')
+		        })
+            }
+        }
+
+        class Scene4a extends Phaser.Scene {
+            constructor() {
+                super( {key: 'Scene4a' })
+            }
+            create() {
+                gameState.text = this.add.text(80, 360, "Let's call them 'Albers'", gameState.textDesign);
+                gameState.square3 = this.add.rectangle(600, 315, 180, 180, gameState.color3.red, gameState.color3.green, gameState.color3.blue);        
+                this.input.on('pointerdown', () => {
+			        this.scene.stop('Scene4a')
+			        this.scene.start('Scene4b')
+		        })
+            }
+        }
+
+        class Scene4b extends Phaser.Scene {
+            constructor() {
+                super( {key: 'Scene4b' })
+            }
+            create() {
+                gameState.text = this.add.text(80, 360, "Let's call them 'Albers'", gameState.textDesign);        
+                gameState.square2 = this.add.rectangle(600, 310, 250, 250, gameState.onColor2);
+                gameState.square3 = this.add.rectangle(600, 315, 180, 180, gameState.color3.red, gameState.color3.green, gameState.color3.blue)
+                this.input.on('pointerdown', () => {
+			        this.scene.stop('Scene4b')
+			        this.scene.start('Scene4c')
+		        })
+            }
+        }
+
+        class Scene4c extends Phaser.Scene {
+            constructor() {
+                super( {key: 'Scene4c' })
+            }
+            create() {
+                gameState.text = this.add.text(80, 360, "Let's call them 'Albers'", gameState.textDesign);
+                gameState.square1 = this.add.rectangle(600, 290, 340, 340, gameState.onColor1);        
+                gameState.square2 = this.add.rectangle(600, 310, 250, 250, gameState.onColor2);
+                gameState.square3 = this.add.rectangle(600, 315, 180, 180, gameState.color3.red, gameState.color3.green, gameState.color3.blue);
+                this.input.on('pointerdown', () => {
+			        this.scene.stop('Scene4c')
+			        this.scene.start('Scene5')
+		        })
+            }
+        }
+
+        class Scene5 extends Phaser.Scene {
+            constructor() {
+                super( {key: 'Scene5' })
+            }
+            create() {
+                gameState.square1 = this.add.rectangle(600, 290, 340, 340, gameState.onColor1);        
+                gameState.square2 = this.add.rectangle(600, 310, 250, 250, gameState.onColor2);
+                gameState.square3 = this.add.rectangle(600, 315, 180, 180, gameState.color3.red, gameState.color3.green, gameState.color3.blue);
+                gameState.text = this.add.text(850, 400 , "after the painter Joseph Albers", gameState.textDesign);
+                gameState.input = this.input.on('pointerdown', () => {
+			        this.scene.stop('Scene5')
+			        this.scene.start('Scene6')
+		        })
+            }
+        }
+
+        class Scene6 extends Phaser.Scene {
+            constructor() {
+                super( {key: 'Scene6' })
+            }
+            create() {
+                gameState.square1 = this.add.rectangle(600, 290, 340, 340, gameState.onColor1);        
+                gameState.square2 = this.add.rectangle(600, 310, 250, 250, gameState.onColor2);
+                gameState.square3 = this.add.rectangle(600, 315, 180, 180, gameState.color3.red, gameState.color3.green, gameState.color3.blue);
+                gameState.text = this.add.text(80, 100 , "So...", gameState.textDesign);
+                gameState.input = this.input.on('pointerdown', () => {
+                    this.scene.stop('Scene6')
+                    this.scene.start('Scene7')
+                })
+            }
+        }
+
+        class Scene7 extends Phaser.Scene {
+            constructor() {
+                super( {key: 'Scene7'})
+            }
+            create() {
+                gameState.square1 = this.add.rectangle(600, 290, 340, 340, gameState.onColor1);        
+                gameState.square2 = this.add.rectangle(600, 310, 250, 250, gameState.onColor2);
+                gameState.square3 = this.add.rectangle(600, 315, 180, 180, gameState.color3.red, gameState.color3.green, gameState.color3.blue);
+                gameState.text = this.add.text(80, 100 , "Hello, Albers !", gameState.textDesign);
+                gameState.input = this.input.on('pointerdown', () => {
+                    this.scene.stop('Scene7')
+                    this.scene.start('Scene8')
+                })
+            }
+        }
+
+        class Scene8 extends Phaser.Scene {
+            constructor() {
+                super( {key: 'Scene8'})
+            }
+            preload() {
+                this.load.audio('hello', './Assets/Hello.wav')
+            }
+            create() {
+                gameState.square1 = this.add.rectangle(600, 290, 340, 340 );
+                gameState.square1.setStrokeStyle(4, gameState.onColor1)        
+                gameState.square2 = this.add.rectangle(600, 310, 250, 250 );
+                gameState.square2.setStrokeStyle(4, gameState.onColor2)
+                gameState.square3 = this.add.rectangle(600, 315, 180, 180 );
+                gameState.square3.setStrokeStyle(4, gameState.color3.red, gameState.color3.green, gameState.color3.blue)
+                gameState.hello = this.sound.add('hello');
+                gameState.hello.play();
+
+                gameState.square1 = this.add.rectangle(600, 290, 340, 340, gameState.onColor1).setVisible(false);
+                gameState.square2 = this.add.rectangle(600, 310, 250, 250, gameState.onColor2).setVisible(false);
+                gameState.square3 = this.add.rectangle(600, 315, 180, 180, gameState.color3.red, gameState.color3.green, gameState.color3.blue).setVisible(false);
+                this.time.addEvent({
+                    delay: 900, callback: onEventSquare1, callbackScope: this                   
+                })
+                function onEventSquare1() {gameState.square3.setVisible(true)};
+
+                this.time.addEvent({
+                    delay: 1300, callback: onEventSquare2, callbackScope: this                   
+                })
+                function onEventSquare2() {gameState.square2.setVisible(true)};
+
+                this.time.addEvent({
+                    delay: 1500, callback: onEventSquare3, callbackScope: this                   
+                })
+                function onEventSquare3() {gameState.square1.setVisible(true)}
+
+                gameState.text = this.add.text(850, 100 , "- Hello !", gameState.textDesign);
+                gameState.input = this.input.on('pointerdown', () => {
+                    this.scene.stop('Scene8')
+                    this.scene.start('Scene9')
+                })
+            }
+        }
+
+        class Scene9 extends Phaser.Scene {
+            constructor() {
+                super( {key: 'Scene9'})
+            }
+            create() {
+                gameState.square1 = this.add.rectangle(600, 290, 340, 340, gameState.onColor1);        
+                gameState.square2 = this.add.rectangle(600, 310, 250, 250, gameState.onColor2);
+                gameState.square3 = this.add.rectangle(600, 315, 180, 180, gameState.color3.red, gameState.color3.green, gameState.color3.blue);
+                gameState.input = this.input.on('pointerdown', () => {
+                    this.scene.stop('Scene9')
+                    this.scene.start('Scene1')
+                })
+            }
+        }
+
+       
+        
+        // function create() {
+        //     gameState.text1 = this.add.text(80, 100, "Here is a square", gameState.textDesign);
+        //     gameState.text2 = this.add.text(80, 150, "Here is another one", gameState.textDesign);
+        //     gameState.text3 = this.add.text(80, 190, "And another one", gameState.textDesign);
+        //     gameState.text4 = this.add.text(80, 360, "Let's call them 'Albers'", gameState.textDesign);
+        //     gameState.text5 = this.add.text(80, 400 , "after the painter Joseph Albers", gameState.textDesign);
+
+            
+        //     gameState.square1 = this.add.rectangle(600, 290, 340, 340, 0xa85050);        
+        //     gameState.square2 = this.add.rectangle(600, 310, 250, 250, 0xa35850);
+        //     gameState.square3 = this.add.rectangle(600, 315, 180, 180, gameState.color3.red, gameState.color3.green, gameState.color3.blue);
+        //     //  add 32px radius on the corners of reactangle
+        //     // graphics = this.add.graphics();
+        //     // graphics.lineStyle(2, 0xffff00, 1);
+        //     // graphics.strokeRoundedRect(33, 33, 300, 200, 32);
+
+        // }
+        
+        const config = {
+            type: Phaser.CANVAS,
+            //type: Phaser.CANVAS .AUTO, ou .WEBGL  attention .AUTO peut causer pb d'affichage ! 
+            width: 1400,
+            height: 700,
+            backgroundColor: 0xc3d8c4,
+            scene: [Scene1, Scene2, Scene3, Scene4a,Scene4b, Scene4c, Scene5, Scene6, Scene7, Scene8, Scene9]
+        }
+        
+        const game = new Phaser.Game(config)
+        </script>
+
+
+
+</body>
+</html>

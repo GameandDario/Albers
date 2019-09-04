@@ -1,0 +1,516 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671\cocoasubrtf600
+{\fonttbl\f0\fswiss\fcharset0 Helvetica-Bold;\f1\fswiss\fcharset0 Helvetica;\f2\fnil\fcharset0 Menlo-Bold;
+\f3\fnil\fcharset0 Menlo-Regular;\f4\fmodern\fcharset0 Courier;\f5\froman\fcharset0 Times-Roman;
+}
+{\colortbl;\red255\green255\blue255;\red56\green185\blue199;\red0\green0\blue0;\red57\green192\blue38;
+\red252\green50\blue32;\red55\green239\blue32;\red235\green239\blue24;\red178\green178\blue178;\red0\green0\blue163;
+\red135\green138\blue4;\red0\green0\blue0;\red170\green171\blue37;\red70\green137\blue204;\red255\green255\blue255;
+\red140\green211\blue254;\red212\green214\blue154;\red202\green202\blue202;\red194\green126\blue101;\red167\green197\blue152;
+\red106\green152\blue85;\red67\green192\blue160;}
+{\*\expandedcolortbl;;\cssrgb\c25544\c77008\c82022;\csgray\c0;\cssrgb\c25704\c77963\c19556;
+\cssrgb\c100000\c29541\c16201;\cssrgb\c22317\c93015\c16432;\cssrgb\c93803\c93590\c10850;\cssrgb\c75000\c75000\c75000;\cssrgb\c0\c0\c70000;
+\cssrgb\c60000\c60000\c0;\cssrgb\c0\c0\c0;\cssrgb\c72330\c71683\c18597;\cssrgb\c33725\c61176\c83922;\cssrgb\c100000\c100000\c100000;
+\cssrgb\c61176\c86275\c99608;\cssrgb\c86275\c86275\c66667;\cssrgb\c83137\c83137\c83137;\cssrgb\c80784\c56863\c47059;\cssrgb\c70980\c80784\c65882;
+\cssrgb\c48627\c65098\c40784;\cssrgb\c30588\c78824\c69020;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww20420\viewh12840\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\b\fs24 \cf0 1/ CREATION DOSSIER
+\f1\b0 \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f2\b \cf2 \CocoaLigature0 ~
+\f3\b0 \cf3  cd Documents \
+
+\f2\b \cf4 \uc0\u10140   \cf2 Documents
+\f3\b0 \cf3  mkdir gameKreator\
+
+\f2\b \cf4 \uc0\u10140   \cf2 Documents
+\f3\b0 \cf3  cd gameKreator \
+
+\f2\b \cf4 \uc0\u10140   \cf2 gameKreator
+\f3\b0 \cf3  npm init -y\
+Wrote to /Users/stephaneurth/Documents/gameKreator/package.json:\
+\
+\{\
+  "name": "gameKreator",\
+  "version": "1.0.0",\
+  "description": "",\
+  "main": "index.js",\
+  "scripts": \{\
+    "test": "echo \\"Error: no test specified\\" && exit 1"\
+  \},\
+  "keywords": [],\
+  "author": "",\
+  "license": "ISC"\
+\}\
+\
+
+\f0\b 2/ dans dossier INSTALLATION PHASER
+\f3\b0 \
+
+\f2\b \cf4 \uc0\u10140   \cf2 gameKreator
+\f3\b0 \cf3  npm install phaser\
+\
+> phaser@3.19.0 postinstall /Users/stephaneurth/Documents/gameKreator/node_modules/phaser\
+> node scripts/support.js\
+\
+\cf5 \uc0\u10084  \cf6 Please help support Phaser development \cf5 \uc0\u10084 \cf3 \
+
+\f2\b \cf7 https://www.patreon.com/photonstorm/
+\f3\b0 \cf3 \
+\
+\cf8 \cb3 npm\cf3 \cb1  \cf9 \cb3 notice\cf3 \cb1  created a lockfile as package-lock.json. You should commit this file.\
+\cf8 \cb3 npm\cf3 \cb1  \cb10 WARN\cb1  remove-files-webpack-plugin@1.1.3 requires a peer of webpack@* but none is installed. You must install peer dependencies yourself.\
+\cf8 \cb3 npm\cf3 \cb1  \cb10 WARN\cb1  gameKreator@1.0.0 No description\
+\cf8 \cb3 npm\cf3 \cb1  \cb10 WARN\cb1  gameKreator@1.0.0 No repository field.\
+\
++ phaser@3.19.0\
+added 43 packages from 72 contributors and audited 50 packages in 26.463s\
+found \cf6 0\cf3  vulnerabilities\
+\
+\
+
+\f0\b 3/ INSTALLATION HTTP_SERVER
+\f3\b0 \
+\
+
+\f2\b \cf4 \uc0\u10140   \cf2 gameKreator
+\f3\b0 \cf3  npm install -g http-server\
+/Users/stephaneurth/.nvm/versions/node/v10.16.0/bin/http-server -> /Users/stephaneurth/.nvm/versions/node/v10.16.0/lib/node_modules/http-server/bin/http-server\
+/Users/stephaneurth/.nvm/versions/node/v10.16.0/bin/hs -> /Users/stephaneurth/.nvm/versions/node/v10.16.0/lib/node_modules/http-server/bin/http-server\
++ http-server@0.11.1\
+added 26 packages from 28 contributors in 4.107s\
+
+\f2\b \cf4 \uc0\u10140   \cf2 gameKreator
+\f3\b0 \cf3  atom .\
+
+\f2\b \cf4 \
+
+\f0 \cf11 4/ LANCEMENT SERVEUR + ADRESSE PAGE
+\f2 \cf4 \
+\
+\cf2 gameKreator
+\f3\b0 \cf3   http-server       \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf12 Starting up http-server, serving \cf2 ./\cf3 \
+\cf12 Available on:\cf3 \
+  http://127.0.0.1:\cf4 8080\cf3 \
+  http://192.168.1.66:\cf4 8080\cf3 \
+Hit CTRL-C to stop the server\
+[Tue Aug 20 2019 20:54:05 GMT+0200 (GMT+02:00)] "\cf2 GET\cf3  \cf2 /index.html\cf3 " "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:68.0) Gecko/20100101 Firefox/68.0"\
+[Tue Aug 20 2019 21:09:56 GMT+0200 (GMT+02:00)] "\cf2 GET\cf3  \cf2 /index.html\cf3 " "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:68.0) Gecko/20100101 Firefox/68.0"\
+[Tue Aug 20 2019 21:11:06 GMT+0200 (GMT+02:00)] "\cf2 GET\cf3  \cf2 /index.html\cf3 " "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:68.0) Gecko/20100101 Firefox/68.0"\
+[Tue Aug 20 2019 21:51:57 GMT+0200 (GMT+02:00)] "\cf2 GET\cf3  \cf2 /index.html\cf3 " "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:68.0) Gecko/20100101 Firefox/68.0"\
+\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1 \
+
+\f0\b Dans fichier\
+\
+Configurer les param\'e8tres d\'92affichage du jeu avec 
+\f3\b0 const config 
+\f0\b et
+\f3\b0  const game
+\f0\b .
+\f3\b0 \
+\
+const config = \{\
+  type: Phaser.AUTO,\
+  width: 400,\
+  height: 450,\
+  backgroundColor: 0x333333,\
+  scene: \{\
+    create\
+  \}\
+\}\
+
+\f1 Le param\'e8tre 
+\f3 scene
+\f1  peut prendre plusieurs cl\'e9s : 
+\f3 preload, upload, update
+\f1 , etc\'85 selon les fonctions requises. \
+\
+
+\f3 const game = new Phaser.Game(config)\
+\
+
+\f0\b Configurer les param\'e8tres de d\'e9placement d\'92un objet 
+\f3\b0 sprite
+\f0\b  avec 
+\f3\b0 function upload() \{\} 
+\f0\b et
+\f3\b0  function create() \{\}
+\f0\b .\
+\
+\pard\pardeftab720\sl360\partightenfactor0
+
+\f3\b0 \cf13 \cb11 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \outl0\strokewidth0 \strokec13 let\cf14 \strokec14  \cf15 \strokec15 van\cf14 \strokec14 ;\cb1 \
+\cf13 \cb11 \strokec13 function\cf14 \strokec14  \cf16 \strokec16 preload\cf14 \strokec14 () \{\cb1 \
+\cb11     \cf15 \strokec15 van\cf14 \strokec14  \cf17 \strokec17 =\cf14 \strokec14  \cf13 \strokec13 this\cf14 \strokec14 .\cf15 \strokec15 load\cf14 \strokec14 .\cf16 \strokec16 image\cf14 \strokec14 (\cf18 \strokec18 'van'\cf14 \strokec14 , \cf18 \strokec18 './visuals/Van'\cf14 \strokec14 )\cb1 \
+\cb11 \}\cb1 \
+\
+\cf13 \cb11 \strokec13 function\cf14 \strokec14  \cf16 \strokec16 create\cf14 \strokec14 () \{\cb1 \
+\cb11     \cf15 \strokec15 van\cf14 \strokec14  \cf17 \strokec17 =\cf14 \strokec14  \cf13 \strokec13 this\cf14 \strokec14 .\cf15 \strokec15 add\cf14 \strokec14 .\cf16 \strokec16 image\cf14 \strokec14 (\cf19 \strokec19 200\cf14 \strokec14 , \cf19 \strokec19 400\cf14 \strokec14 , \cf18 \strokec18 'van'\cf14 \strokec14 )\cb1 \
+\cb11 \}\cb1 \
+\
+\cf13 \cb11 \strokec13 function\cf14 \strokec14  \cf16 \strokec16 update\cf14 \strokec14 () \{\cb1 \
+\cb11     \cf15 \strokec15 van\cf14 \strokec14 .\cf15 \strokec15 x\cf14 \strokec14  \cf17 \strokec17 +=\cf19 \strokec19 10\cf14 \strokec14 ;\cb1 \
+\cb11 \}\cb1 \
+\
+\pard\pardeftab720\sl280\partightenfactor0
+
+\f4 \cf11 \strokec11 let circle;\
+\
+function create() \{\
+  // create a red circle with radius 20 at (0, 100)\
+  circle = this.add.circle(0, 100, 20, 0xff0000);\
+\}\
+\
+function update() \{\
+  // move that circle to the right\
+  circle.x += 1;\
+\}\
+\
+\
+
+\f1 Dans 
+\f4 \cf11 \outl0\strokewidth0 create(), 
+\f1 \cf11 \outl0\strokewidth0 \strokec11 on peut d\'e9clarer tout un ensemble d\'92objets : formes, images, sons, textes, usage de clavier ou interaction \'e0 la souris,  etc\'85\
+\
+
+\f3 function create() \{\
+  // add our 'incredible' sound to our scene here!\
+  gameState.incredible = this.sound.add('incredible');\
+  gameState.awesome = this.sound.add('awesome')\
+  \
+  // Display "Incredible" and "Really, really awesome" buttons\
+  gameState.incredibleBox = this.add.rectangle(200, 150, 300, 200, 0xdadaaa)\
+  gameState.awesomeBox = this.add.rectangle(200, 400, 300, 200, 0xaadada)\
+  gameState.incredibleText = this.add.text(150, 135, "Incredible", \{ fill: "#222222", font: "20px Times New Roman"\})\
+  gameState.awesomeText = this.add.text(110, 385, "Really, really awesome", \{ fill: "#222222", font: "20px Times New Roman"\})\
+  gameState.incredibleBox.setInteractive();\
+  gameState.awesomeBox.setInteractive();\
+\
+  // add a 'pointerup' handler to incredibleBox here:\
+  gameState.incredibleBox.on('pointerup', function() \{\
+    gameState.incredible.play()\
+  \});\
+  gameState.awesomeBox.on('pointerup', function() \{\
+    gameState.awesome.play()\
+  \})\
+\}\
+\
+
+\f1 \
+\
+
+\f4 \
+\pard\pardeftab720\sl360\partightenfactor0
+
+\f3 \cf14 \strokec14 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\b \cf3 \kerning1\expnd0\expndtw0 \CocoaLigature0 \outl0\strokewidth0 Configurer le storing state 
+\f3\b0 const gameState =\{\}\
+\
+\pard\pardeftab720\sl360\partightenfactor0
+\cf20 \cb11 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \outl0\strokewidth0 \strokec20 // Define "gameState" here\cf14 \cb1 \strokec14 \
+\pard\pardeftab720\sl360\partightenfactor0
+\cf13 \cb11 \strokec13 const\cf14 \strokec14  \cf15 \strokec15 gameState\cf14 \strokec14  \cf17 \strokec17 =\cf14 \strokec14  \{\};\cb1 \
+\
+\cf13 \cb11 \strokec13 function\cf14 \strokec14  \cf16 \strokec16 create\cf14 \strokec14 () \{\cb1 \
+\cb11   \cf20 \strokec20 // Create a circle and assign it to gameState.circle here\cf14 \cb1 \strokec14 \
+\cb11   \cf15 \strokec15 gameState\cf14 \strokec14 .\cf15 \strokec15 circle\cf14 \strokec14  \cf17 \strokec17 =\cf14 \cb1 \strokec14 \
+\cf13 \cb11 \strokec13 this\cf14 \strokec14 .\cf15 \strokec15 add\cf14 \strokec14 .\cf16 \strokec16 circle\cf14 \strokec14 (\cf19 \strokec19 40\cf14 \strokec14 , \cf19 \strokec19 45\cf14 \strokec14 , \cf19 \strokec19 20\cf14 \strokec14 , \cf19 \strokec19 0x4B35EF\cf14 \strokec14 );\cb1 \
+\cb11 \}\cb1 \
+\
+\cf13 \cb11 \strokec13 function\cf14 \strokec14  \cf16 \strokec16 update\cf14 \strokec14 () \{\cb1 \
+\cb11   \cf20 \strokec20 // Update the circle in gameState.circle here\cf14 \cb1 \strokec14 \
+\cb11   \cf15 \strokec15 gameState\cf14 \strokec14 .\cf15 \strokec15 circle\cf14 \strokec14 .\cf15 \strokec15 y\cf14 \strokec14  \cf17 \strokec17 +=\cf14 \strokec14  \cf19 \strokec19 1\cf14 \cb1 \strokec14 \
+\
+\cb11 \}\cb1 \
+\
+\cf13 \cb11 \strokec13 const\cf14 \strokec14  \cf15 \strokec15 config\cf14 \strokec14  \cf17 \strokec17 =\cf14 \strokec14  \{\cb1 \
+\cb11 \'a0\'a0\cf15 \strokec15 type:\cf14 \strokec14  \cf15 \strokec15 Phaser\cf14 \strokec14 .\cf15 \strokec15 AUTO\cf14 \strokec14 ,\cb1 \
+\cb11 \'a0\'a0\cf15 \strokec15 width:\cf14 \strokec14  \cf19 \strokec19 450\cf14 \strokec14 ,\cb1 \
+\cb11 \'a0\'a0\cf15 \strokec15 height:\cf14 \strokec14  \cf19 \strokec19 600\cf14 \strokec14 ,\cb1 \
+\cb11 \'a0\'a0\cf15 \strokec15 backgroundColor:\cf14 \strokec14  \cf18 \strokec18 "#99ff99"\cf14 \strokec14 ,\cb1 \
+\cb11 \'a0\'a0\cf15 \strokec15 scene:\cf14 \strokec14  \{\cb1 \
+\cb11     \cf15 \strokec15 create\cf14 \strokec14 ,\cb1 \
+\cb11     \cf15 \strokec15 update\cf14 \cb1 \strokec14 \
+\cb11 \'a0\'a0\}\cb1 \
+\cb11 \}\cb1 \
+\
+\cf13 \cb11 \strokec13 const\cf14 \strokec14  \cf15 \strokec15 game\cf14 \strokec14  \cf17 \strokec17 =\cf14 \strokec14  \cf13 \strokec13 new\cf14 \strokec14  \cf21 \strokec21 Phaser\cf14 \strokec14 .\cf21 \strokec21 Game\cf14 \strokec14 (\cf15 \strokec15 config\cf14 \strokec14 )\cb1 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\b \cf3 \kerning1\expnd0\expndtw0 \CocoaLigature0 \outl0\strokewidth0 \
+
+\f3\b0 \
+\
+\
+\pard\pardeftab720\sl280\partightenfactor0
+
+\f4 \cf11 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \outl0\strokewidth0 \strokec11 const gameState = \{\};\
+\
+function create() \{\
+  gameState.circle = this.add.circle(20, 20, 5, 0xff0000);\
+  gameState.rectangle = this.add.rectangle(40, 60, 90, 10, 0x00ff00);\
+\}\
+\
+function update() \{\
+  gameState.circle.x += 1;\
+  gameState.rectangle.y += 1;\
+\}\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f3 \cf3 \kerning1\expnd0\expndtw0 \CocoaLigature0 \outl0\strokewidth0 \
+
+\f0\b Configurer une interaction avec un objet avec 
+\f4\b0 objet.\cf11 \expnd0\expndtw0\kerning0
+\CocoaLigature1 setInteractive();\
+\pard\pardeftab720\sl280\partightenfactor0
+\cf11   \cf3 \kerning1\expnd0\expndtw0 \CocoaLigature0 objet.\cf11 \expnd0\expndtw0\kerning0
+\CocoaLigature1 on('pointerup', function() \{\
+    this.fillColor = 0x00FF00;\
+  \});\
+\
+
+\f1 Les m\'e9thodes 
+\f4 \cf11 setInteractive() 
+\f1 \cf11 et 
+\f4 on() 
+\f1 sont d\'e9clar\'e9es dans  
+\f4 function create() 
+\f1 au pointage de souris.
+\f4 \
+\
+\cf11 on() 
+\f1 admet plusieurs types d\'92\'e9venements et une fonction callback qui d\'e9finit le type d\'92action caus\'e9e par l\'92\'e9v\'e9nement.\
+\pard\pardeftab720\sl280\partightenfactor0
+
+\f4 \cf11 \outl0\strokewidth0 \strokec11 'pointerdown\'92, 'pointerup\'92, 'pointerover\'92, 'pointerout\'92 
+\f1 pour des \'e9venements au pointage de souris.
+\f4 \cf11 \outl0\strokewidth0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f3 \cf3 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
+\pard\pardeftab720\sl280\partightenfactor0
+
+\f4 \cf11 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \outl0\strokewidth0 \strokec11 const gameState = \{\}\
+\
+function create() \{\
+  gameState.circle = this.add.circle(50, 50, 20, 0xFF0000);\
+  gameState.circle.setInteractive();\
+  gameState.circle.on('pointerup', function() \{\
+    this.fillColor = 0x00FF00;\
+  \});\
+\}\
+\
+const config = \{\
+  scene: \{ create \}\
+\}\
+\
+const game = new Phaser.Game(config)\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\b \cf3 \kerning1\expnd0\expndtw0 \CocoaLigature0 \outl0\strokewidth0 Configurer une interaction avec un objet avec 
+\f4\b0 \cf11 \expnd0\expndtw0\kerning0
+\CocoaLigature1 this.input.keyboard.on('keyboard-touch\'92,function() \{\} )
+\f1 \cf11  
+\f0\b \'e0 l\'92usage du clavier (touche \'e0 d\'e9finir)
+\f1\b0 .
+\f4 \cf11 \
+\cf11 \outl0\strokewidth0 \strokec11 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf11 \
+const gameState = \{\};\
+\
+function create() \{\
+  gameState.circle = this.add.circle(30, 30, 10, 0xFF0000);\
+  this.input.keyboard.on('keyboard-W', function() \{\
+    gameState.circle.fillColor = 0xFFFF00;\
+  \});\
+\}\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\b \cf3 \kerning1\expnd0\expndtw0 \CocoaLigature0 \outl0\strokewidth0 Configurer une interaction avec un objet avec 
+\f4\b0 \cf11 \expnd0\expndtw0\kerning0
+\CocoaLigature1 this.input.keyboard.createCursorKeys();\cf11 )
+\f1 \cf11  
+\f0\b \'e0 l\'92usage du clavier (touche pr\'e9-d\'e9finies)
+\f1\b0 .\
+\pard\pardeftab720\sl280\partightenfactor0
+
+\f5 \cf11 \outl0\strokewidth0 \strokec11 (
+\f4 UP
+\f5 , 
+\f4 DOWN
+\f5 , 
+\f4 LEFT
+\f5 , 
+\f4 RIGHT
+\f5 , 
+\f4 SHIFT
+\f5 , and 
+\f4 SPACE
+\f5 )
+\f1 \cf11 \outl0\strokewidth0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf11 \outl0\strokewidth0 \strokec11 D\'e9claration dans
+\f4  create() 
+\f1 d\'92une constante de curseur li\'e9e au clavier.\
+Puis d\'e9claration dans 
+\f4 \cf11 \outl0\strokewidth0 update() 
+\f1 \cf11 \outl0\strokewidth0 \strokec11 sous forme de condition 
+\f4 \cf11 \outl0\strokewidth0 if
+\f1 \cf11 \outl0\strokewidth0 \strokec11 () \{\} du d\'e9placement quand la touche d\'e9clar\'e9e 
+\f4 \cf11 \outl0\strokewidth0 isDown\cf11 \outl0\strokewidth0 \strokec11 \
+\
+\pard\pardeftab720\sl280\partightenfactor0
+\cf11 const gameState = \{\};\
+\
+function create() \{\
+  gameState.circle = this.add.circle(50, 50, 20, 0xFF0000);\
+  gameState.cursors = this.input.keyboard.createCursorKeys();\
+\}\
+\
+function update() \{\
+  if (gameState.cursors.left.isDown) \{\
+    // move the circle left!\
+    gameState.circle.x -= 3;\
+  \}\
+	\cf11 \outl0\strokewidth0 if (gameState.cursors.right.isDown) \{\
+\pard\pardeftab720\sl280\partightenfactor0
+\cf11     // move the circle right!\
+    gameState.circle.x += 3;\
+  \}\
+\pard\pardeftab720\sl280\partightenfactor0
+\cf11 \outl0\strokewidth0 \strokec11 \
+\}\
+\
+const config = \{ scene: \{ create, update \}\};\
+const game = new Phaser.Game(config);\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f3 \cf3 \kerning1\expnd0\expndtw0 \CocoaLigature0 \outl0\strokewidth0 \
+
+\f1 On peut configurer les 4 directions li\'e9es au 4 fl\'e8ches, avec vitesse de d\'e9placement variable 
+\f4 \cf11 \expnd0\expndtw0\kerning0
+\CocoaLigature1 += 3.
+\f3 \cf3 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
+\pard\pardeftab720\sl280\partightenfactor0
+
+\f4 \cf11 \expnd0\expndtw0\kerning0
+\CocoaLigature1 SHIFT
+\f5 \cf11  and 
+\f4 \cf11 SPACE 
+\f1 peuvent aussi \'eatre configur\'e9es.\
+\
+\
+
+\f0\b Configurer le passage entre plusieurs sc\'e8nes\
+
+\f1\b0 \
+Chaque sc\'e8ne est une
+\f3  class.js\
+
+\f1 Les sc\'e8nes sont d\'e9clar\'e9es dans l\'92objet
+\f3  config 
+\f1 du fichier
+\f3  game.js\
+
+\f1 L\'92ensemble des fichiers est d\'e9clar\'e9s comme
+\f3  script 
+\f1 dans
+\f3  index.html\
+
+\f1 \
+
+\f4 class Scene3 extends Phaser.Scene \{\
+	constructor() \{\
+		super(\{ key: 'Scene3' \})\
+	\}\
+  \
+  create() \{\
+    this.add.text(110, 450, 'This is the third Scene!', \{fill: '#000000', fontSize: '20px'\})\
+    \
+		this.input.on('pointerdown', () => \{\
+			this.scene.stop('Scene3')\
+			this.scene.start('Scene1')\
+		\})\
+  \}\
+\} \cf3 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f3 \
+
+\f1 Les sc\'e8nes sont appel\'e9es dans un fichier
+\f3  game.js 
+\f1 lequel contient les
+\f3  const config 
+\f1 et
+\f3  gameState. 
+\f1 Dans
+\f3  config, 
+\f1 les sc\'e8nes sont d\'e9clar\'e9es dans un array.\
+
+\f3 \
+const gameState = \{\
+  score: 0\
+\};\
+\
+const config = \{\
+  type: Phaser.AUTO,\
+  width: 500,\
+  height: 600,\
+  backgroundColor: "b9eaff",\
+  scene: [Scene1, Scene2, Scene3]\
+\};\
+\
+const game = new Phaser.Game(config);\
+\
+index.html 
+\f1 compile l\'92ensemble des scripts.
+\f3 \
+\
+<!doctype html>\
+<html lang="en">\
+<head>\
+    <meta charset="UTF-8" />\
+    <title>Adding Complexity to a Phaser Game</title>\
+    <style>\
+      canvas \{\
+        width: 450px;\
+      \}\
+    </style>\
+    \
+</head>\
+<body>\
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.16.2/dist/phaser.min.js"></script>\
+\
+  <script src="Scene1.js"></script>\
+  <script src="Scene2.js"></script>\
+  <script src="Scene3.js"></script>\
+  <script src="game.js"></script>\
+</body>\
+</html>\
+\
+
+\f1 Il est possible de pr\'e9senter toutes les class de sc\'e8nes sur un m\'eame fichier
+\f3  game.js 
+\f1 si le projet n\'92est pas trop complexe.
+\f3 \
+\
+}
